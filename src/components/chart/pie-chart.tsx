@@ -18,7 +18,7 @@ interface PieChartProps {
 }
 
 export function PieChart({ months, installment }: PieChartProps) {
-  const data = Array.from({ length: months }).map((item, idx) => ({
+  const data = Array.from({ length: months }).map((_, idx) => ({
     payment: installment,
     fill: `var(--chart-${idx + 1})`,
   }));
